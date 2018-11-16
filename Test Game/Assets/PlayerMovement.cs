@@ -38,11 +38,11 @@ public class PlayerMovement : MonoBehaviour {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
         if(moveRight) {
-            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
+            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         if(moveLeft) {
-            rb.AddForce(-1 * sidewaysForce * Time.deltaTime, 0, 0);
+            rb.AddForce(-1 * sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 	}
 }
